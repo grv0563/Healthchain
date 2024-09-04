@@ -13,6 +13,11 @@ import Success from "./pages/auth/signup/Success";
 import Dashboard from "./pages/dashboards/Dashboard";
 import Profile from "./pages/profile/Profile";
 import SignOut from "./pages/auth/signout/SignOut";
+import PatientDash from "./pages/dashboards/patientDashboard/PatientDash";
+import InsurnaceDash from "./pages/dashboards/insurnaceDashboard/InsurnaceDash";
+import PharmaDash from "./pages/dashboards/pharmaDashboard/PharmaDash";
+import ProviderDash from "./pages/dashboards/provideDashboard/ProviderDash";
+import TestCenterDash from "./pages/dashboards/Test_Center_Dashboard/TestCenterDash";
 function App() {
   const [loggedin, setLoggedin] = useState(true);
   return (
@@ -30,6 +35,15 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/signout" element={<SignOut />} />
+
+          <Route path="/patientDashboard" element={<PatientDash />} />
+          <Route path="/insurnaceDashboard" element={<InsurnaceDash />} />
+          <Route path="/pharmaDashboard" element={<PharmaDash />} />
+          <Route path="/provideDashboard" element={<ProviderDash />} />
+          <Route path="/testcenterDashboard" element={<TestCenterDash />} />
+          
+
+
         </Routes>
       </BrowserRouter>
     </>
