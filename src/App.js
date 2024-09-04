@@ -10,7 +10,9 @@ import Login from "./pages/auth/login/Login";
 import Scan from "./pages/qrcode/Scan";
 import { useState } from "react";
 import Success from "./pages/auth/signup/Success";
-import Dashboard from "./pages/dashboard/Dashboard";
+import Dashboard from "./pages/dashboards/Dashboard";
+import Profile from "./pages/profile/Profile";
+import SignOut from "./pages/auth/signout/SignOut";
 function App() {
   const [loggedin, setLoggedin] = useState(true);
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/afterscan" element={<AfterScan />} />
           <Route path="/shedules" element={<Schedules />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/signout" element={<SignOut />} />
         </Routes>
       </BrowserRouter>
     </>

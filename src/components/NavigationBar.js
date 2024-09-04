@@ -13,8 +13,8 @@ function NavigationBar() {
         <img className="company-logo" src={logo} alt="company logo" />
         </Navbar.Brand>
         <Navbar.Brand href="/">
-        <h5 >NextGen </h5>
-        <h6>EHR</h6>
+        <h5 >HealthChain </h5>
+        <h6>Network</h6>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
