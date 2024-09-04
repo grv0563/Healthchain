@@ -1,0 +1,20 @@
+.qrcode-main-area {
+    text-align: center;
+    border: 4px aqua solid;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 7px;
+    background: linear-gradient(
+        217deg,
+        rgba(202, 102, 102, 0.8),
+        rgba(255, 0, 0, 0) 70.71%
+      ),
+      linear-gradient(127deg, rgba(23, 34, 23, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  }
+  .qrcode-main-area img {
+    width: 120px;
+    height: 120px;
+  }
+  

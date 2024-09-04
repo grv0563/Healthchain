@@ -1,0 +1,20 @@
+.vision-main-area{
+    text-align: center;
+}
+ .vision-flowchart img{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    border: 1px black solid;
+    border-radius: 4px;
+    
+  }
+  .aim-image img{
+    width: 20;
+    height: 20;
+  }
+  h3{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }

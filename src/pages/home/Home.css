@@ -1,0 +1,161 @@
+.home-container {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.home-main-area {
+}
+.home-main-area-intro {
+  /* max-width: fit-content; */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  width: 100%;
+  /* height: 400px; */
+  padding-right: 10px;
+  padding-right: 10px;
+  /* background-image: -o-linear-gradient(to right,rgb(105, 101, 101),red); */
+  /* background: linear-gradient(217deg, rgba(48, 4, 4, 0.8), rgba(187, 126, 126, 0) 70.71%),
+            linear-gradient(127deg, rgba(10, 37, 10, 0.8), rgba(0, 0, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(0, 0, 14, 0.8), rgba(0,0,255,0) 70.71%); */
+}
+.home-main-area-intro-1 {
+  /* margin-top: 20px; */
+  height: inherit;
+  /* background-color: aqua; */
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border: 4px aqua solid;
+  border-radius: 70px;
+  
+}
+.home-main-area-intro-1 p {
+  color: rgb(231, 231, 230);
+}
+.home-main-area-intro-1 p a {
+  color: blue;
+}
+.home-main-area-intro-header {
+  /* padding-top: 60px; */
+}
+h2 {
+  /* color: white; */
+  background: -webkit-linear-gradient(#ffffff, #4e4844);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-main-area-intro-header-colored-text {
+  font-size: 46px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(
+    74deg,
+    #4285f4 0,
+    #4285f4 9%,
+    #7e2f01,
+    #d96570 20%,
+    #d96570 24%,
+    #9b72cb 35%,
+    #4285f4 44%,
+    #9b72cb 50%,
+    #d96570 56%,
+    #fff 75%,
+    #fff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-main-area-intro-header .rise-color-coding {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  background: -webkit-linear-gradient(#092399, #7e2f01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.call-to-action {
+  margin-top: 20px;
+}
+.Problem-statement {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  color: white;
+  border: 4px aqua solid;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 7px;
+  background: linear-gradient(
+      217deg,
+      rgba(202, 102, 102, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(23, 34, 23, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+.Problem-statement p {
+  text-align: justify;
+}
+.Problem-statement h3 {
+  text-align: left;
+}
+
+.opportunity_and_problem h3 {
+  margin-top: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white;
+}
+
+.roadmap-for-implementation {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  color: white;
+}
+.roadmap-for-implementation ul li img {
+  width: 25px;
+  height: 25px;
+}
+
+.phase-common-css {
+  border: 4px aqua solid;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 7px;
+  background: linear-gradient(
+      217deg,
+      rgba(202, 102, 102, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(23, 34, 23, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+.nextgen-ehr-features {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  color: white;
+  border: 4px aqua solid;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 7px;
+}
+.nextgen-ehr-features img {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+}
+.Whitepaper p {
+  color: white;
+}

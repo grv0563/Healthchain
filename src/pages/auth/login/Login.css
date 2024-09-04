@@ -1,0 +1,16 @@
+p{
+    text-align: center;
+    margin-top: 15px;
+}
+.btn .login-btn button{ 
+    padding-bottom: 40px;
+}
+.register-btn{
+    text-align: center;
+}
+.contact-help-link{
+    color: blue;
+}
+.forgotton-passwd-link{
+    color: blue;
+}

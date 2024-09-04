@@ -1,0 +1,30 @@
+*{
+
+}
+.afterscan-main{
+    text-align: center;
+}
+button{
+    
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    border-style: inset;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+
+}
+ input{
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 90%;
+    height: 40px;
+}
+.afterscan-prescribe-drug input{
+    
+}
+span {
+    content: "\002B";
+  }
