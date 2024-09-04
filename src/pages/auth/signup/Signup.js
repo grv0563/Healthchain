@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from "../../../firebase/config";
+// import { app } from "../../../firebase/config";
 
 // import { useSignup } from "../../hooks/useSignup";
 
@@ -18,20 +18,7 @@ function Signup() {
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(email, password, displayname);
-    const auth = getAuth(app);
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
-        console.log(user);
 
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
     const message = document.getElementById("successfull-message");
     message.innerText = "Hey, " + displayname + " Registration got succesfull";
     sleep(4000);
@@ -39,12 +26,13 @@ function Signup() {
     setemail("");
     setpassword("");
     setdispalyname("");
+      window.location.replace("/success");
+    
   };
   const handleHealthcareActor = (e) => {
     e.preventDefault();
-    console.log(selectedActor)
+    console.log(selectedActor);
     setSelectedActor(e.target.value);
-    
   };
   return (
     <div className="auth-form">
@@ -79,7 +67,7 @@ function Signup() {
             type="text"
             onChange={(e) => {
               setdispalyname(e.target.value);
-              console.log()
+              console.log();
             }}
             value={displayname}
           />
@@ -100,13 +88,20 @@ function Signup() {
         <input required type="file" />
       </label> */}
 
-        <button className="btn">Register</button>
+        <button className="btn">
+          Register 
+        </button>
       </form>
       <hr></hr>
       <div className="login-btn">
         <p>Already Registred ?</p>
-        <button className="btn">
-          <a href="/login">Login</a>
+        <button
+          className="btn"
+          onClick={(e) => {
+            window.location.replace("/login");
+          }}
+        >
+          Login
         </button>
       </div>
       <p id="successfull-message" className="successfull-message-calss"></p>

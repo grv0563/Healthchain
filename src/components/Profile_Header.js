@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../assets/logo.png"
 import "./NavigationBar.css"
 
-function NavigationBar() {
+function Profile_Header() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
@@ -20,10 +20,20 @@ function NavigationBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"
           style={{textAlign:"center"}} >
-            {/* <Nav.Link href="/qrcode">QR</Nav.Link>
-            <Nav.Link href="/qrscan">Scan</Nav.Link> */}
-            
-  
+            <Nav.Link href="/qrcode">QR</Nav.Link>
+            <Nav.Link href="/qrscan">Scan</Nav.Link>
+            <Nav.Link href="/learn">Learn</Nav.Link>
+            <NavDropdown title="Company" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
+              <NavDropdown.Item href="/vision">
+                Vision
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/roadmap">RoadMap</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/aboutus">
+                About us
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Nav style={{textAlign:"center"}}>
             <Nav.Link href="/login">
@@ -39,4 +49,4 @@ function NavigationBar() {
   );
 }
 
-export default NavigationBar;
+export default Profile_Header;

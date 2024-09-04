@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import {app} from "../../../firebase/config"
+// import {app} from "../../../firebase/config"
 // import { useSignup } from "../../hooks/useSignup";
 
 function Signup() {
@@ -10,21 +10,10 @@ function Signup() {
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
-    const auth = getAuth(app);
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user)
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
 
     setemail("");
     setpassword("");
+    window.location.replace("/dashboard");
   };
   return (
     <div className="auth-form">
@@ -52,23 +41,10 @@ function Signup() {
             value={password}
           />
         </label>
-        {/* <label>
-        <span>Display Name :</span>
-        <input
-          required
-          type="text"
-          onChange={(e) => {
-            setdispalyname(e.target.value);
-          }}
-          value={displayname}
-        />
-      </label> */}
-        {/* <label>
-        <span>Profile thumbnail:</span>
-        <input required type="file" />
-      </label> */}
-
-        <button className="btn login-btn">Login</button>
+        <button className="btn login-btn">
+          {/* <a href="/dashboard">Login</a> */}
+          Login
+        </button>
       </form>
 
       <p>
@@ -78,8 +54,13 @@ function Signup() {
       </p>
       <hr></hr>
       <div className="register-btn">
-        <button className="btn">
-          <a href="/signup"> Register</a>
+        <button
+          onClick={(e) => {
+            window.location.replace("/signup");
+          }}
+          className="btn"
+        >
+          Register
         </button>
       </div>
       <p>

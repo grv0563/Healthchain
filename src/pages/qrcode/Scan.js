@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "../../components/NavigationBar";
 import Footer from "../../components/Footer";
 import Qr_Mission from "../../assets/qr-mission.png"
 import './Scan.css'
+import Profile_Header from "../../components/Profile_Header";
 function Scan() {
   return (
     <div className="qrscan-container">
       <div className="qrscan-header">
-        <Navbar />
+       <Profile_Header/>
       </div>
       <div className="qrscan-main-area">
       <h3>Apology for Disappointment </h3>

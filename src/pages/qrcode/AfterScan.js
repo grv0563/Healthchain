@@ -1,7 +1,7 @@
 import React from "react";
-import NavigationBar from "../../components/NavigationBar";
 import Footer from "../../components/Footer";
 import "./AfterScan.css";
+import Profile_Header from "../../components/Profile_Header";
 function AfterScan() {
   const handleprescription = () => {
     //write code to implement the prescription process
@@ -17,7 +17,7 @@ function AfterScan() {
   return (
     <div className="afterscan-container">
       <div className="afterscan-header">
-        <NavigationBar />
+        <Profile_Header/>
       </div>
       <div className="afterscan-main">
         <h1>Patient History</h1>

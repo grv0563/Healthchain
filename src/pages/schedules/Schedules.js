@@ -1,11 +1,11 @@
 import React from 'react'
 import './Schedules.css'
-import Navbar from '../../components/NavigationBar';
 import Footer from '../../components/Footer';
+import Profile_Header from '../../components/Profile_Header';
 function Schedules() {
   return (
     <div>
-        <Navbar/>
+       <Profile_Header/>
       Schedules
       <Footer/>
     </div>

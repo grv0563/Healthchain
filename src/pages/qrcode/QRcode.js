@@ -1,13 +1,13 @@
 import React from "react";
 import "./QRcode.css";
-import Navbar from "../../components/NavigationBar";
 import Footer from "../../components/Footer";
 import Qr_Mission from "../../assets/qr-mission.png";
+import Profile_Header from "../../components/Profile_Header";
 function QRcode() {
   return (
     <div className="qrcode-conatiner">
       <div className="qrcode-header">
-        <Navbar />
+        <Profile_Header/>
       </div>
       <div className="qrcode-main-area">
         <h3>Apology for Disappointment </h3>
