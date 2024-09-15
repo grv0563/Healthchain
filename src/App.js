@@ -7,7 +7,6 @@ import QRcode from "./pages/qrcode/QRcode";
 import Schedules from "./pages/schedules/Schedules";
 import AfterScan from "./pages/qrcode/AfterScan";
 import Login from "./pages/auth/login/Login";
-import Scan from "./pages/qrcode/Scan";
 import { useState } from "react";
 import Success from "./pages/auth/signup/Success";
 import Dashboard from "./pages/dashboards/Dashboard";
@@ -18,6 +17,9 @@ import InsurnaceDash from "./pages/dashboards/insurnaceDashboard/InsurnaceDash";
 import PharmaDash from "./pages/dashboards/pharmaDashboard/PharmaDash";
 import ProviderDash from "./pages/dashboards/provideDashboard/ProviderDash";
 import TestCenterDash from "./pages/dashboards/Test_Center_Dashboard/TestCenterDash";
+import Scan from "./pages/qrcode/Scan";
+import Prescribe from "./pages/qrcode/Prescribe";
+
 function App() {
   const [loggedin, setLoggedin] = useState(true);
   return (
@@ -30,12 +32,13 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/qrcode" element={<QRcode />} />
           <Route path="/qrscan" element={<Scan />} />
+          <Route path="/prescribe" element={<Prescribe />} />
           <Route path="/afterscan" element={<AfterScan />} />
           <Route path="/shedules" element={<Schedules />} />
           <Route path="/success" element={<Success />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/signout" element={<SignOut />} />
-
+          # Dashboards
           <Route path="/patientDashboard" element={<PatientDash />} />
           <Route path="/insurnaceDashboard" element={<InsurnaceDash />} />
           <Route path="/pharmaDashboard" element={<PharmaDash />} />

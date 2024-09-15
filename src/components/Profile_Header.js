@@ -23,14 +23,14 @@ function Profile_Header() {
             <Nav.Link href="/qrcode">QR</Nav.Link>
             <Nav.Link href="/qrscan">Scan</Nav.Link>
           </Nav>
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
+        <Nav style={{textAlign:"center"}}>
+        <Navbar.Text >
             Signed in as: <a href="/profile">UserName</a>
           </Navbar.Text>
-          <Navbar.Text>
-          <button className="btn" onClick={()=>{window.location.replace("/signout")}}>Logout</button>
-          </Navbar.Text>
-        </Navbar.Collapse>
+            <Nav.Link eventKey={2} href="/signout">
+              <button className="btn">Signout</button>
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
