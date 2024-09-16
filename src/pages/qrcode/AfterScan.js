@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import "./AfterScan.css";
 import Profile_Header from "../../components/Profile_Header";
+import interval from "../../assets/interval.png";
+import upload from "../../assets/upload.png";
 
 let drugId = 0;
 let patientHealthRecords = {
@@ -10,7 +12,8 @@ let patientHealthRecords = {
   x_rays: ["x_rays1", "x_rays2"],
   mri_scans: ["mris1", "mris2"],
 };
-
+let x = [];
+let i = 0;
 
 function AfterScan() {
   const [drug, setdrug] = useState();
@@ -19,7 +22,6 @@ function AfterScan() {
   const handleprescription = () => {
     //write code to implement the prescription process
     alert(" congratulations! prescription Done");
-   
   };
   const handleSummarize = () => {
     //write code to summirize the patient history with gemini AI api
@@ -28,7 +30,13 @@ function AfterScan() {
   const handle_drug_adding_in_prescription = () => {
     // alert("Drug added in Precription");
     setprescribed_drug([...prescribed_drug, { id: drugId++, name: drug }]);
+    x[i] = drug;
+    i++;
     setdrug("");
+  };
+
+  const handle_interval = () => {
+    alert("interval");
   };
   return (
     <div className="afterscan-container">
@@ -51,8 +59,6 @@ function AfterScan() {
           <li>Prescriptions</li>
           <p>{patientHealthRecords.prescriptions[0]}</p>
           <p>{patientHealthRecords.prescriptions[1]}</p>
-
-         
         </ul>
         <button onClick={handleSummarize}>Summarize</button>
         <button onClick={handleprescription}>Prescribe</button>
@@ -62,15 +68,24 @@ function AfterScan() {
           ))}
         </ul>
         <div className="afterscan-prescribe-drug">
-          <input
-            placeholder="Type drug name"
-            value={drug}
-            onChange={(e) => {
-              setdrug(e.target.value);
-            }}
-          />
+          <div className="input-drug">
+            <input
+              placeholder="Type drug name"
+              value={drug}
+              onChange={(e) => {
+                setdrug(e.target.value);
+              }}
+            />
+            <input className="upload-file" content="upload" type="file" />
+          </div>
+
           <button onClick={handle_drug_adding_in_prescription}>
             <span>&#43;</span>
+          </button>
+          <button className="interval" onClick={handle_interval}>
+            <span>
+              <img src={interval} />
+            </span>
           </button>
         </div>
       </div>
