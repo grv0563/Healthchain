@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-// import {app} from "../../../firebase/config"
-// import { useSignup } from "../../hooks/useSignup";
+
 
 function Signup() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(email, password);

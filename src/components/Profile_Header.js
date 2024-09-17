@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../assets/logo.png"
 import "./NavigationBar.css"
 
-function Profile_Header() {
+function Profile_Header(props) {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
@@ -25,7 +25,7 @@ function Profile_Header() {
           </Nav>
         <Nav style={{textAlign:"center"}}>
         <Navbar.Text >
-            Signed in as: <a href="/profile">UserName</a>
+            Signed in as: userName <a href="/profile">{props.userName}</a>
           </Navbar.Text>
             <Nav.Link eventKey={2} href="/signout">
               <button className="btn">Signout</button>

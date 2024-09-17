@@ -18,6 +18,7 @@ let i = 0;
 function AfterScan() {
   const [drug, setdrug] = useState();
   const [prescribed_drug, setprescribed_drug] = useState([]);
+  const [file, serfile] = useState("");
 
   const handleprescription = () => {
     //write code to implement the prescription process
@@ -30,14 +31,17 @@ function AfterScan() {
   const handle_drug_adding_in_prescription = () => {
     // alert("Drug added in Precription");
     setprescribed_drug([...prescribed_drug, { id: drugId++, name: drug }]);
-    x[i] = drug;
-    i++;
     setdrug("");
   };
 
   const handle_interval = () => {
     alert("interval");
   };
+  const handleFileUpload =(e)=>{
+    e.preventDefault();
+    serfile(e.target.value)
+
+  }
   return (
     <div className="afterscan-container">
       <div className="afterscan-header">
@@ -67,6 +71,9 @@ function AfterScan() {
             <li key={drug.id}>{drug.name}</li>
           ))}
         </ul>
+        <ul>
+          <li>{file}</li>
+        </ul>
         <div className="afterscan-prescribe-drug">
           <div className="input-drug">
             <input
@@ -76,7 +83,7 @@ function AfterScan() {
                 setdrug(e.target.value);
               }}
             />
-            <input className="upload-file" content="upload" type="file" />
+            <input value={file} onChange={handleFileUpload} className="upload-file" content="upload" type="file" />
           </div>
 
           <button onClick={handle_drug_adding_in_prescription}>
