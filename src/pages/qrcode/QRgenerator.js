@@ -3,7 +3,7 @@ import "./QRgenerator.css";
 import Footer from "../../components/Footer";
 import Profile_Header from "../../components/Profile_Header";
 import QRCode from "react-qr-code";
-let value="http://quizai.in/afterscan"
+let value="https://staging.grvnotes.com/afterscan"
 function QRgenerator() {
   return (
     <div className="qrcode-conatiner">

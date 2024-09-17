@@ -1,0 +1,16 @@
+.afterscan-main .patient-history-container{
+    margin-left: 10px;
+    margin-right: 10px;
+border: 0px;
+border-radius: 0px;
+color: black;
+}
+.afterscan-main .patient-history-container .accordion-header{
+    color: black;
+}
+h2 button{
+    text-shadow: 0 0 black
+}
+ul li{
+    text-align: center;
+}

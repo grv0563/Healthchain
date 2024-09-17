@@ -9,8 +9,8 @@ function Scan() {
   useEffect(() => {
     const scanner = new Html5QrcodeScanner("reader", {
       qrbox: {
-        height: 250,
-        width: 250,
+        height: 400,
+        width:400,
       },
       fps: 5,
     });
@@ -35,8 +35,11 @@ function Scan() {
       <div className="qrscan-main-area">
         {scanresult ? (
           <div className="qr-scan-result">
+            
             Success : <a href={scanresult}>{scanresult}</a>{" "}
+            {window.location.replace("https://staging.grvnotes.com/afterscan")}
           </div>
+          
         ) : (
           <div id="reader"></div>
 
