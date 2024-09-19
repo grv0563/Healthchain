@@ -1,19 +1,49 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-
-function Signup() {
+function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  
+  const [selectedActor, setSelectedActor] = useState("Option 1");
+
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
 
     setemail("");
     setpassword("");
-    window.location.replace("/dashboard");
+    // window.location.replace("/dashboard");
+    console.log(selectedActor);
+    if(selectedActor == "Option 1"){
+      window.location.replace("/patientDashboard");
+  
+    }
+    if(selectedActor == "Option 2"){
+      window.location.replace("/dashboard");
+      
+    }
+    if(selectedActor == "Option 3"){
+      window.location.replace("/testcenterDashboard");
+      
+    }
+    if(selectedActor == "Option 4"){
+      window.location.replace("/pharmaDashboard");
+      
+    }
+    if(selectedActor == "Option 5"){
+      window.location.replace("/insurnaceDashboard");
+      
+    }
+  
   };
+
+  const handleHealthcareActor = (e) => {
+    e.preventDefault();
+    console.log(selectedActor);
+    setSelectedActor(e.target.value);
+  };
+
+
   return (
     <div className="auth-form">
       <form onSubmit={handlesubmit}>
@@ -39,6 +69,17 @@ function Signup() {
             }}
             value={password}
           />
+        </label>
+        <label>
+          <span>Select Category:</span>
+          <select value={selectedActor} onChange={handleHealthcareActor}>
+            <option value="Option 1">Patient</option>
+            <option value="Option 2">Healthcare Provider</option>
+
+            <option value="Option 3">Testing Center</option>
+            <option value="Option 4">Pharma/Life-Science Company</option>
+            <option value="Option 5">Insurance Company</option>
+          </select>
         </label>
         <button className="btn login-btn">
           {/* <a href="/dashboard">Login</a> */}
@@ -73,4 +114,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

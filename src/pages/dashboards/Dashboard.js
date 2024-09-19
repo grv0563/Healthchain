@@ -83,7 +83,7 @@ function Dashboard() {
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
-                  Patient id#2 - Most Rcent{" "}
+                  Patient id#2 - Most Recent{" "}
                   <img
                     style={{
                       marginLeft: "10px",

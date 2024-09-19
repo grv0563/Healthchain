@@ -3,7 +3,6 @@ import Footer from "../../components/Footer";
 import "./AfterScan.css";
 import Profile_Header from "../../components/Profile_Header";
 import interval from "../../assets/interval.png";
-import upload from "../../assets/upload.png";
 
 let drugId = 0;
 let patientHealthRecords = {
