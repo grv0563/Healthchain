@@ -16,7 +16,7 @@ button{
     background-color: white;
 
 }
- input{
+ .prescribe-container.afterscan-prescribe-drug input{
     border-radius: 10px;
     padding-left: 20px;
     width: 90%;

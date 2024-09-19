@@ -1,0 +1,15 @@
+.notification-container Button {
+
+   width: 60px;
+}
+.notification-container Button:hover{
+    color: white;
+    background-color: white;
+   
+}
+.notification-container img{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+}

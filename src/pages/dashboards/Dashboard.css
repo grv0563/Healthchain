@@ -1,0 +1,33 @@
+.dashboard-mainarea{
+    text-align: center;
+}
+.patient-adminitration-dashboard p{
+    text-align: left;
+    margin-left: 20px;
+}
+ .patient-adminitration-dashboard .patient-adminitration-navigationbar {
+    display: flex;
+    padding: 0%;
+    text-align: center;
+    
+}
+.patient-adminitration-dashboard .patient-adminitration-navigationbar .search-bar{
+    width: 90%;
+    /* margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; */
+    margin: 20px;
+}
+
+
+
+.patient-adminitration-dashboard .patient-adminitration-navigationbar .notification-bar button{
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 20px;
+}

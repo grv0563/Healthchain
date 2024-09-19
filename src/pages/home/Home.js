@@ -82,7 +82,7 @@ function Home() {
               <img src={EHR_Features} alt="NextGen EHR system Features" />
             </div>
           </div>
-          <div className="roadmap-for-implementation">
+          {/* <div className="roadmap-for-implementation">
             <h3>The RoadMap</h3>
             <div className="phase-1 phase-common-css">
               <h3>Phase 1 - The Concept (Q2, 2024)</h3>
@@ -177,7 +177,7 @@ function Home() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className="Whitepaper">
             <p>Learn more About NextGen EHR and RISE System?</p>
             <button className="btn">

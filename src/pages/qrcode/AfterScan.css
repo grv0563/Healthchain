@@ -76,7 +76,7 @@
 span {
   content: "\002B";
 }
-ul li {
+.afterscan-main ul li {
   font-weight: bolder;
   font-size: 20px;
 }

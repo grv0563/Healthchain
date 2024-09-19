@@ -20,6 +20,7 @@ import ProviderDash from "./pages/dashboards/provideDashboard/ProviderDash";
 import TestCenterDash from "./pages/dashboards/Test_Center_Dashboard/TestCenterDash";
 import Scan from "./pages/qrcode/Scan";
 import Prescribe from "./pages/qrcode/Prescribe";
+import SearchBar from "./pages/dashboards/componenets/SearchBar";
 
 function App() {
   const [loggedin, setLoggedin] = useState(true);
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/search" element={<SearchBar />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/qrcode" element={<QRgenerator />} />
