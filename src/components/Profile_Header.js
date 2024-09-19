@@ -25,7 +25,7 @@ function Profile_Header(props) {
           </Nav>
         <Nav style={{textAlign:"center"}}>
         <Navbar.Text >
-            Signed in as: Dr. MK <a href="/profile">{props.userName}</a>
+            Signed in as: <a href="/profile">{props.userName}</a>
           </Navbar.Text>
             <Nav.Link eventKey={2} href="/signout">
               <button className="btn">Signout</button>

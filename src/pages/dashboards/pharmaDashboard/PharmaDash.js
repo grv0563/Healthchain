@@ -6,7 +6,7 @@ function PharmaDash() {
   return (
     <div className='pharma-container'>
     <div className='pharma-header'>
-      <Profile_Header/>
+      <Profile_Header userName="Z pharmaceutics Ltd" />
     </div>
     <div className='pharma-mainarea'>
     <h1>Pharmacy or Life Science Dashboard</h1>

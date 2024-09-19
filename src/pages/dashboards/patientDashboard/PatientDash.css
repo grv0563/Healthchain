@@ -3,9 +3,17 @@
 .afterscan-main {
   text-align: center;
 }
-.afterscan-prescribe-drug {
-  /* background-color: chartreuse; */
+.afterscan-main .explore{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  
 }
+.afterscan-main .explain-medical-history{
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .afterscan-prescribe-drug button {
   margin-top: 0px;
   margin-left: 5px;

@@ -6,7 +6,7 @@ function ProviderDash() {
   return (
     <div className='provider-container'>
     <div className='provider-header'>
-    <Profile_Header/>
+    <Profile_Header userName="DR. Gaurav Shakya"/>
     </div>
     <div className='provider-mainarea'>
     provider-mainarea

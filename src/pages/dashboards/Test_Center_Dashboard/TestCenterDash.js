@@ -6,7 +6,7 @@ function TestCenterDash() {
   return (
     <div className='testingcenter-container'>
     <div className='testingcenter-header'>
-        <Profile_Header/>
+        <Profile_Header userName="XYZ Testing Center"/>
     </div>
     <div className='testingcenter-mainarea'>
     <h1>Testing LAB Dashboard</h1>

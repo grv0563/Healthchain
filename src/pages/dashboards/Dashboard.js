@@ -8,7 +8,8 @@ import Notification from "./componenets/Notification";
 import DashboardPagination from "./componenets/DashboardPagination";
 import new_message_icon from "../../assets/new-message-icon.png";
 import interval from "../../assets/interval.png";
-import { Datashare } from "../qrcode/Prescribe";
+import Prescribe, { Datashare } from "../qrcode/Prescribe";
+import Summarize from "../qrcode/Summarize";
 
 
 let drugId = 0;
@@ -86,13 +87,6 @@ function Dashboard() {
           </div>
           <div className="patient-list">
 
-
-
-           
-
-
-
-
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
@@ -108,7 +102,7 @@ function Dashboard() {
                   />
                 </Accordion.Header>
                 <Accordion.Body>
-                  <ul className="dashboard-button">
+                  <ul >
                     <h3>Medical History - patient id#1 </h3>
                     <h4>Medical_tests</h4>
                     <li>{patientHealthRecords.medical_tests[0]}</li>
@@ -122,8 +116,10 @@ function Dashboard() {
                     <h4>Prescriptions</h4>
                     <li>{patientHealthRecords.prescriptions[0]}</li>
                     <li>{patientHealthRecords.prescriptions[1]}</li>
-                    <button onClick={handleSummarize}>Summarize</button>
-                    <button onClick={handleprescription}>Prescribe</button>
+                    <div className="dashboard-button">
+                    <Summarize/>
+                    <Prescribe/>
+                    </div>
                     <ul>
                       {prescribed_drug.map((drug) => (
                         <li key={drug.id}>{drug.name}</li>
@@ -135,7 +131,7 @@ function Dashboard() {
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Patient id#1</Accordion.Header>
                 <Accordion.Body>
-                  <ul className="dashboard-button">
+                  <ul >
                     <h3>Medical History - patient id#2 </h3>
                     <h4>Medical_tests</h4>
                     <li>{patientHealthRecords.medical_tests[0]}</li>
@@ -149,8 +145,10 @@ function Dashboard() {
                     <h4>Prescriptions</h4>
                     <li>{patientHealthRecords.prescriptions[0]}</li>
                     <li>{patientHealthRecords.prescriptions[1]}</li>
-                    <button onClick={handleSummarize}>Summarize</button>
-                    <button onClick={handleprescription}>Prescribe</button>
+                    <div className="dashboard-button">
+                    <Summarize/>
+                    <Prescribe/>
+                    </div>
                     <ul>
                       {prescribed_drug.map((drug) => (
                         <li key={drug.id}>{drug.name}</li>
@@ -164,7 +162,7 @@ function Dashboard() {
           <div className="afterscan-prescribe-drug">
             <div className="input-drug">
               <input
-                placeholder="Type drug name"
+                placeholder="Quick latest journal search"
                 value={drug}
                 onChange={(e) => {
                   setdrug(e.target.value);
@@ -180,12 +178,7 @@ function Dashboard() {
             </div>
 
             <button onClick={handle_drug_adding_in_prescription}>
-              <span>&#43;</span>
-            </button>
-            <button className="interval" onClick={handle_interval}>
-              <span>
-                <img src={interval} />
-              </span>
+              <span>explore</span>
             </button>
           </div>
           <div className="dashboard-pagination">
