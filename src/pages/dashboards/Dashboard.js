@@ -8,6 +8,7 @@ import Notification from "./componenets/Notification";
 import DashboardPagination from "./componenets/DashboardPagination";
 import new_message_icon from "../../assets/new-message-icon.png";
 import interval from "../../assets/interval.png";
+import { Datashare } from "../qrcode/Prescribe";
 
 
 let drugId = 0;
@@ -17,6 +18,7 @@ let patientHealthRecords = {
   x_rays: ["x_rays1", "x_rays2"],
   mri_scans: ["mris1", "mris2"],
 };
+
 
 function Dashboard() {
   const [drug, setdrug] = useState();
@@ -44,6 +46,8 @@ function Dashboard() {
     e.preventDefault();
     serfile(e.target.value);
   };
+
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
@@ -81,7 +85,14 @@ function Dashboard() {
             </div>
           </div>
           <div className="patient-list">
-            
+
+
+
+           
+
+
+
+
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
