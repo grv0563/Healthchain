@@ -9,6 +9,7 @@ import DashboardPagination from "./componenets/DashboardPagination";
 import new_message_icon from "../../assets/new-message-icon.png";
 import interval from "../../assets/interval.png";
 
+
 let drugId = 0;
 let patientHealthRecords = {
   medical_tests: ["test1", "test2"],
@@ -80,6 +81,7 @@ function Dashboard() {
             </div>
           </div>
           <div className="patient-list">
+            
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
@@ -186,5 +188,7 @@ function Dashboard() {
     </div>
   );
 }
+
+
 
 export default Dashboard;

@@ -1,7 +1,7 @@
 *{
 
 }
-.afterscan-main{
+/* .afterscan-main{
     text-align: center;
 }
 button{
@@ -27,4 +27,7 @@ button{
 }
 span {
     content: "\002B";
+  } */
+  .afterscan-prescribe-drug{
+    display: block;
   }

@@ -75,8 +75,10 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.call-to-action {
+.call-to-action button {
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .Problem-statement {
   margin-left: auto;
