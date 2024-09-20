@@ -5,6 +5,7 @@ import "./PatientDash.css";
 import Profile_Header from "../../../components/Profile_Header";
 import interval from "../../../assets/interval.png";
 import MedicalHistoryExplain from "./MedicalHistoryExplain";
+import Search from "./Search";
 
 let patientHealthRecords = {
   medical_tests: ["test1", "test2"],
@@ -18,7 +19,7 @@ function PatientDash() {
   const [search, setsearch] = useState();
 let searchString="";
   function handleExplore(e){
-    const searchString="what is " +{search};
+    
     }
     
 
@@ -51,19 +52,18 @@ let searchString="";
 
         <div className="explore">
           <input
-            placeholder="pursue your Health "
+            placeholder="Pursue your Health "
             value={search}
             onChange={(e) => {
               setsearch(e.target.value);
             }}
           />
-          <button onClick={handleExplore}>explore</button>
+          {/* <button onClick={handleExplore}>explore</button>
           <p>
             {searchString}
           </p>
-          <p>
-            
-          </p>
+           */}
+           <Search searchStr={search} />
         </div>
       </div>
       <div className="aterscan-footer">

@@ -15,12 +15,12 @@ import Profile from "./pages/profile/Profile";
 import SignOut from "./pages/auth/signout/SignOut";
 import PatientDash from "./pages/dashboards/patientDashboard/PatientDash";
 import InsurnaceDash from "./pages/dashboards/insurnaceDashboard/InsurnaceDash";
-import PharmaDash from "./pages/dashboards/pharmaDashboard/PharmaDash";
-import ProviderDash from "./pages/dashboards/provideDashboard/ProviderDash";
 import TestCenterDash from "./pages/dashboards/Test_Center_Dashboard/TestCenterDash";
 import Scan from "./pages/qrcode/Scan";
 import Prescribe from "./pages/qrcode/Prescribe";
 import SearchBar from "./pages/dashboards/componenets/SearchBar";
+import ResearchDashboard from "./pages/dashboards/researchDashboard/ResearchDashboard";
+import PharmaDash from "./pages/dashboards/pharmaDashboard/PharmaDash";
 
 function App() {
   const [loggedin, setLoggedin] = useState(true);
@@ -43,11 +43,11 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/signout" element={<SignOut />} />
           # Dashboards
+          <Route path="/pharmaDashboard" element={<PharmaDash />} />
           <Route path="/patientDashboard" element={<PatientDash />} />
           <Route path="/insurnaceDashboard" element={<InsurnaceDash />} />
-          <Route path="/pharmaDashboard" element={<PharmaDash />} />
-          <Route path="/provideDashboard" element={<ProviderDash />} />
           <Route path="/testcenterDashboard" element={<TestCenterDash />} />
+          <Route path="/researchdashboard" element={<ResearchDashboard />} />
           
 
 

@@ -34,6 +34,10 @@ function Login() {
       window.location.replace("/insurnaceDashboard");
       
     }
+    if(selectedActor == "Option 6"){
+      window.location.replace("/researchdashboard");
+      
+    }
   
   };
 
@@ -79,6 +83,8 @@ function Login() {
             <option value="Option 3">Testing Center</option>
             <option value="Option 4">Pharma/Life-Science Company</option>
             <option value="Option 5">Insurance Company</option>
+            <option value="Option 6">Research Institute/College/School</option>
+
           </select>
         </label>
         <button className="btn login-btn">

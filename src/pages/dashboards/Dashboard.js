@@ -10,7 +10,7 @@ import new_message_icon from "../../assets/new-message-icon.png";
 import interval from "../../assets/interval.png";
 import Prescribe, { Datashare } from "../qrcode/Prescribe";
 import Summarize from "../qrcode/Summarize";
-
+import Explore from "./Explore";
 
 let drugId = 0;
 let patientHealthRecords = {
@@ -20,20 +20,12 @@ let patientHealthRecords = {
   mri_scans: ["mris1", "mris2"],
 };
 
-
 function Dashboard() {
   const [drug, setdrug] = useState();
   const [prescribed_drug, setprescribed_drug] = useState([]);
   const [file, serfile] = useState("");
 
-  const handleprescription = () => {
-    //write code to implement the prescription process
-    alert(" congratulations! prescription Done");
-  };
-  const handleSummarize = () => {
-    //write code to summirize the patient history with gemini AI api
-    alert("Health History summrary looks nice");
-  };
+ 
   const handle_drug_adding_in_prescription = () => {
     // alert("Drug added in Precription");
     setprescribed_drug([...prescribed_drug, { id: drugId++, name: drug }]);
@@ -48,11 +40,10 @@ function Dashboard() {
     serfile(e.target.value);
   };
 
-
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <Profile_Header />
+        <Profile_Header userName="Dr. Gaurav Shakya" />
       </div>
       <div className="dashboard-mainarea">
         <h1>Doctor's EHR dashboard</h1>
@@ -86,7 +77,6 @@ function Dashboard() {
             </div>
           </div>
           <div className="patient-list">
-
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
@@ -102,7 +92,7 @@ function Dashboard() {
                   />
                 </Accordion.Header>
                 <Accordion.Body>
-                  <ul >
+                  <ul>
                     <h3>Medical History - patient id#1 </h3>
                     <h4>Medical_tests</h4>
                     <li>{patientHealthRecords.medical_tests[0]}</li>
@@ -117,8 +107,8 @@ function Dashboard() {
                     <li>{patientHealthRecords.prescriptions[0]}</li>
                     <li>{patientHealthRecords.prescriptions[1]}</li>
                     <div className="dashboard-button">
-                    <Summarize/>
-                    <Prescribe/>
+                      <Summarize />
+                      <Prescribe />
                     </div>
                     <ul>
                       {prescribed_drug.map((drug) => (
@@ -131,7 +121,7 @@ function Dashboard() {
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Patient id#1</Accordion.Header>
                 <Accordion.Body>
-                  <ul >
+                  <ul>
                     <h3>Medical History - patient id#2 </h3>
                     <h4>Medical_tests</h4>
                     <li>{patientHealthRecords.medical_tests[0]}</li>
@@ -146,8 +136,8 @@ function Dashboard() {
                     <li>{patientHealthRecords.prescriptions[0]}</li>
                     <li>{patientHealthRecords.prescriptions[1]}</li>
                     <div className="dashboard-button">
-                    <Summarize/>
-                    <Prescribe/>
+                      <Summarize />
+                      <Prescribe />
                     </div>
                     <ul>
                       {prescribed_drug.map((drug) => (
@@ -177,12 +167,13 @@ function Dashboard() {
               />
             </div>
 
-            <button onClick={handle_drug_adding_in_prescription}>
-              <span>explore</span>
-            </button>
+            {/* <button onClick={handle_drug_adding_in_prescription}>
+              explore
+            </button> */}
+            <Explore searchQuery={drug} />
           </div>
           <div className="dashboard-pagination">
-            <DashboardPagination />
+            <DashboardPagination  />
           </div>
         </div>
       </div>
@@ -192,7 +183,5 @@ function Dashboard() {
     </div>
   );
 }
-
-
 
 export default Dashboard;

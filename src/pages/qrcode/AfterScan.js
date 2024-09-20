@@ -48,7 +48,7 @@ function AfterScan() {
   return (
     <div className="afterscan-container">
       <div className="afterscan-header">
-        <Profile_Header />
+        <Profile_Header userName="Dr. Gaurav Shakya" />
       </div>
       <div className="afterscan-main">
         <h1>Patient History</h1>

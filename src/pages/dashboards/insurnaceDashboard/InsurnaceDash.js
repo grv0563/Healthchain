@@ -7,7 +7,7 @@ function InsurnaceDash() {
   return (
     <div className='isurnace-coantiner'>
         <div className='isnurance-header'>
-        <Profile_Header userName="Y Insurnace Ltd" />
+        <Profile_Header userName="Y Health Insurer Pvt Ltd" />
         </div>
         <div className='insurnace-mainarea'>
         <h1>Insurnace company Dashboard</h1>
